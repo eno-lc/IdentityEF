@@ -1,0 +1,32 @@
+﻿@page
+@model IdentityEF.Pages.LoginModel
+@{
+}
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="mb-3">Login</h1>
+            <form method="post">
+                <div class="mb-3">
+                    <label class="form-label" asp-for="ModelLogin.Email">E-mail</label>
+                    <input type="text" asp-for="ModelLogin.Email" class="form-control" />
+                    <span asp-validation-for="ModelLogin.Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="ModelLogin.Password">Password</label>
+                    <input type="password" asp-for="ModelLogin.Password" class="form-control" />
+                    <span asp-validation-for="ModelLogin.Password" class="text-danger"></span>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" asp-for="ModelLogin.RememberMe" class="form-check-input"/>
+                    <label class="form-check-label" asp-for="ModelLogin.RememberMe">Remember me</label>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
